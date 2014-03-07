@@ -13,8 +13,8 @@ sudo cp ./proxy.conf /etc/nginx/nginx.conf
 echo 'Ensuring nginx will run on startup...' 
 sudo update-rc.d nginx defaults 
 
-echo 'Creating proxy auth credentials...' 
-htpasswd -c /etc/nginx/conf.d/.htpasswd proxy-clienti
+echo "Creating proxy auth credentials for user 'proxy-client'..." 
+htpasswd -c /etc/nginx/conf.d/.htpasswd proxy-client
 
 echo 'Starting nginx...'
 sudo nginx
